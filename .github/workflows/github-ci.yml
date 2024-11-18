@@ -1,0 +1,23 @@
+# name: List-it-up
+
+# on:
+#   push:
+#     branches: 
+#       - development
+#   pull_request:
+#     branches:
+#       - development
+
+# jobs:
+#   build: 
+#     runs-on: ubuntu-latest
+    
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v2
+    
+#       - name: Build and push to github registry
+#         run: |
+#           docker login --username ${{secrets.USERNAME}} --password ${{secrets.GH_TOKEN}} ghcr.io
+#           docker build . -t ${{secrets.REPO_URL}}
+#           docker push ${{secrets.REPO_URL}}
